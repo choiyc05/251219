@@ -87,6 +87,7 @@
 | **변수 결합** | `+` 연산자 사용 (복잡함) | `${variable}` (간결함) |
 | **가독성** | 낮음 (코드가 지저분해짐) | 높음 (한 문장으로 보임) |
 
+```js
 	const today = "Good~";
 	
 	// 문자열 길이
@@ -132,13 +133,15 @@
 	today.padStart(10,'*ab')	*ab*aGood~
 	today.padEnd(10,'*ab')		Good~*ab*a
 	today.padEnd(4,'*')			Good~
+```
 	
 | 특징 | 설명 |
 | :--- | :--- |
 | 원본 유지 | 기존 문자열을 바꾸지 않고, 채워진 새로운 문자열을 반환합니다. |
 | 이미 충분히 길다면 | 목표 길이가 현재 문자열 길이보다 작거나 같으면, 아무것도 채우지 않고 원본을 그대로 반환합니다. |
 | 채울 문자 생략 | 두 번째 인자를 생략하면 기본적으로 공백(" ")으로 채워집니다. |
-	
+
+```js
     // 특정 문자 찾기 : true/false
     console.log(today.includes('d'))	true	
     console.log(today.includes('Go'))	true	
@@ -169,6 +172,7 @@
     console.log('|'+say.trim()+'|');			 // 양쪽 공백 제거
 
 	say.replaceAll(" ","") 과 비교하여 trim의 존재 이유? 띄어쓰기 또한 삭제하므로 trim 기능 이용 시 양 공백만 제거 가능
+```
 	
 
 			
