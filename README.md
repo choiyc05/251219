@@ -112,8 +112,11 @@
     today.split('d')	['Goo', '~']
 	today.split('o')	['G', '', 'd~']
 	today.split('~')	['Good', '']
-	
 
+	var a = "가나다가나다가나다";
+	var b = a.split('');b
+	(9) [ '가', '나', '다', '가', '나', '다']
+	
     // 특정 문자 추가
     // 문법 : 문자열.padStart(문자열 전체 길이, '추가할 문자')
     // const today = 'Good~' ;
@@ -121,18 +124,22 @@
     // 문법 : 문자열.padEnd(문자열 전체 길이, '추가할 문자')
     console.log(today.padEnd(10, '*'))
 
+	today.padStart(10,'*ab')	*ab*aGood~
+	today.padEnd(10,'*ab')		Good~*ab*a
+	today.padEnd(4,'*')			Good~
+
     // 특정 문자 찾기 : true/false
-    console.log(today.includes('d'))
-    console.log(today.includes('Go'))
-    console.log(today.includes('go'))
+    console.log(today.includes('d'))	true	
+    console.log(today.includes('Go'))	true	
+    console.log(today.includes('go'))	false	//대소문자 구분됨
 
     // 특정 문자의 위치(index) 리턴
     // - 있음 : 탐색된 첫 번째 문자의 인덱스 리턴
     // - 없음 : -1 리턴
     // const today = 'Good~';
-    console.log(today.indexOf('o'))
-    console.log(today.indexOf('Go'))
-    console.log(today.indexOf('h'))
+    console.log(today.indexOf('o'))		1
+    console.log(today.indexOf('Go'))	0
+    console.log(today.indexOf('h'))		-1
 
     // 반복
     console.log(today.repeat(3))
@@ -149,6 +156,8 @@
     console.log('|'+say.trimStart()+'|'); // 왼쪽 공백 제거
     console.log('|'+say.trimEnd()+'|'); // 오른쪽 공백 제거
     console.log('|'+say.trim()+'|'); // 양쪽 공백 제거
+
+	say.replaceAll(" ","") 과 비교하여 trim의 존재 이유? 띄어쓰기 또한 삭제하므로 trim 기능 이용 시 양 공백만 제거 가능
 	
 
 			
