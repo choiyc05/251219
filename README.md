@@ -88,14 +88,13 @@
 | **가독성** | 낮음 (코드가 지저분해짐) | 높음 (한 문장으로 보임) |
 
 	const today = "Good~";
+	
 	// 문자열 길이
     console.log('문자열 길이 :', today.length)
     
     // 특정 문자 변경
-    // -일치하는 첫 번째만 변경
-    console.log(today.replace('o', 'ap-'))
-    // 일치하는 모두 변경
-    console.log(today.replaceAll('o', 'ap-'))
+    console.log(today.replace('o', 'ap-'))		// 일치하는 첫 번째만 변경
+    console.log(today.replaceAll('o', 'ap-'))	// 일치하는 모두 변경
     
     // 특정 위치의 문자 추출
     // 1. 문자열.substring(시작 인덱스, 끝 인덱스)
@@ -133,14 +132,17 @@
 	today.padStart(10,'*ab')	*ab*aGood~
 	today.padEnd(10,'*ab')		Good~*ab*a
 	today.padEnd(4,'*')			Good~
-	원본 유지: 기존 문자열을 바꾸지 않고, 채워진 새로운 문자열을 반환합니다.
-	이미 충분히 길다면: 목표 길이가 현재 문자열 길이보다 작거나 같으면, 아무것도 채우지 않고 원본을 그대로 반환합니다.
-	채울 문자 생략: 두 번째 인자를 생략하면 기본적으로 **공백(" ")**으로 채워집니다.
-
+	
+| 특징 | 설명 |
+| :--- | :--- |
+| 원본 유지 | 기존 문자열을 바꾸지 않고, 채워진 새로운 문자열을 반환합니다. |
+| 이미 충분히 길다면 | 목표 길이가 현재 문자열 길이보다 작거나 같으면, 아무것도 채우지 않고 원본을 그대로 반환합니다. |
+| 채울 문자 생략 | 두 번째 인자를 생략하면 기본적으로 공백(" ")으로 채워집니다. |
+	
     // 특정 문자 찾기 : true/false
     console.log(today.includes('d'))	true	
     console.log(today.includes('Go'))	true	
-    console.log(today.includes('go'))	false	//대소문자 구분됨
+    console.log(today.includes('go'))	false	// 대소문자 구분됨
 
     // 특정 문자의 위치(index) 리턴
     // - 있음 : 탐색된 첫 번째 문자의 인덱스 리턴
