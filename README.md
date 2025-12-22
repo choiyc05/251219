@@ -110,6 +110,8 @@
     console.log(today.slice(1))		처음부터 1 위치
     console.log(today.slice(-4))	끝에서부터 -4 위치
 	> 셋다 동일하게 ood~ 출력 됨
+		cf) console.log(today.slice(0, -1)); 	인덱스0 부터 마지막인덱스-1 까지 
+
     
     // 특정 문자 기준으로 분리(쪼개기)
     // : 배열로 리턴
